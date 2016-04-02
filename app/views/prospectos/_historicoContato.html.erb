@@ -1,0 +1,40 @@
+<div ng-app="demo">
+	<div ng-controller="ControllerHistoricoContato">
+		<div ng-hide="esconderHistoricoContato">
+
+      <!--<%= form_tag(historicoprospectos_path, :method => :get) do %>
+        <%= text_field_tag 'search', nil, placeholder: 'Entre...' %>
+        <%= submit_tag "search" %>
+      <% end %>-->
+
+      <%= form_for Historicoprospecto.new, :html => { :class => "form-horizontal historicoprospecto" } do |f|  %>
+        <div ng-hide="esconderHistoricoContato">
+          <div class="control-group">
+            <div class="controls">  
+              <div class="col-xs-10"><%= f.text_area :descricao, size: "50x5", :placeholder => "Descrição do contato: (o que aconteceu? Como foi? Quem atendeu?)", :class => 'form-control' %>
+              </div>  
+            </div>
+          </div>
+          </br></br></br></br></br> </br></br></br>
+          <div class="col-xs-10">
+            <div class="input-group">
+              <span class="input-group-btn">
+                <span style="background-color:#F24472" class="btn btn-primary" onclick="$(this).parent().find('input[type=file]').click();">Anexar</span>
+                <%= f.file_field :anexo, :onchange => "$(this).parent().parent().find('.form-control').html($(this).val().split(/[\\|/]/).pop());", :style => "display: none;", :type => "file" %>
+              </span>
+              <span class="form-control"></span>
+            </div> 
+          </div> </br> </br></br>
+
+          <div class="control-group">
+            <div class="controls">  
+              <div class="col-xs-4"><%= f.collection_select :situacao_id, Situacao.all, :id, :nome, {prompt: "Status"}, {class: "form-control"} %>
+              </div>  
+            </div>
+          </div>
+          <%= f.submit "Salvar", :class => 'btn btn-primary botaoSalvar' %>
+        </div></br></br></br> 
+      <% end %>
+    </div>
+	</div>
+</div>

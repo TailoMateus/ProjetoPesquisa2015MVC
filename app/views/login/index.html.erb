@@ -1,0 +1,25 @@
+<!--<% if usuario_signed_in? %>
+<ul>
+	<li><%= link_to "Sair", destroy_usuario_session_path, method: :delete  %></li>
+</ul>
+<% else %>
+<ul>
+	<li><%= link_to "Logar", new_usuario_session_path %></li>
+	<li><%= link_to "CADASTRO", new_usuario_registration_path %></li>
+</ul> 
+<% end %>
+<ul>
+	<li><%= link_to "Prospecto", new_prospecto_path %></li>
+</ul>
+-->
+    
+<body style="background-color:#6d6d6d">
+  <div class="linhaVertical"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+		    <div id="centralizarMenu"><span style="font-size: 30px;"></span></br> <%= link_to "Prospecto", new_prospecto_path, :style=> 'color:#7ef297' %></div>
+      </div>
+    </div>
+  </div>
+</body>

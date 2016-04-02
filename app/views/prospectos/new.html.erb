@@ -1,0 +1,22 @@
+<script type='text/javascript'>
+	(function(){
+		if(window.localStorage){
+			if( !localStorage.getItem('firstLoad')){
+	      		localStorage[ 'firstLoad' ] = true;
+	      	window.location.reload();
+	    	}  
+	    	else
+	      		localStorage.removeItem('firstLoad');
+	  	}
+	})();
+</script>
+
+<div class="container">
+	</br></br><h3 style="color:#f24472"><%= l Time.new, :format => '%d de %B' %></h3>
+	<h4><%= current_usuario.nome %></h4>
+	<h5><%= current_usuario.funcao %></h5>
+
+	<h2 style="color:#f24472">PROSPECTO</h2>
+
+	<%= render :partial => 'menu' %>
+</div>

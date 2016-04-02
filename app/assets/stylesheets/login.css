@@ -1,0 +1,17 @@
+#centralizarMenu{
+  width:50%;
+  position:absolute;
+  top:50%;
+  left:25%;
+  margin-top:15%;
+  text-align: center;
+  color: #7ef297;
+};
+
+div.linhaVertical {
+  line-height:0;
+  width:0;
+  height:0;
+  border: 70px solid;
+  border-color: #f24472 #6d6d6d #6d6d6d #f24472;
+};

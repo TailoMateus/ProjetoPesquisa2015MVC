@@ -1,0 +1,35 @@
+<div ng-app="demo">
+	<div ng-controller="ControllerMenu">
+
+		<p style="color:#a39d95" ng-click="esconderCadastroBasico = true" ng-show="!esconderCadastroBasico">CADASTRO BÁSICO <span ng-click="esconderCadastroBasico = true" ng-show="!esconderCadastroBasico" class="glyphicon glyphicon-minus alinhandoIcones coresIconesMenos"></span></p>
+
+		<p style="color:#a39d95" ng-click="esconderCadastroBasico = false" ng-show="esconderCadastroBasico">CADASTRO BÁSICO <span ng-click="esconderCadastroBasico = false" ng-show="esconderCadastroBasico" class="glyphicon glyphicon-plus alinhandoIcones coresIconesMais"></span></p>
+		
+		<%= render :partial => 'cadastroBasico' %>
+
+		<p style="color:#a39d95" ng-click="esconderHistoricoContato = true" ng-show="!esconderHistoricoContato">HISTÓRICO DE CONTATOS <span ng-click="esconderHistoricoContato = true" ng-show="!esconderHistoricoContato" class="glyphicon glyphicon-minus alinhandoIcones coresIconesMenos"></span></p>
+
+      	<p style="color:#a39d95" ng-click="esconderHistoricoContato = false" ng-show="esconderHistoricoContato">HISTÓRICO DE CONTATOS <span size:"10px" ng-click="esconderHistoricoContato = false" ng-show="esconderHistoricoContato" class="glyphicon glyphicon-plus alinhandoIcones coresIconesMais"></span></p>
+
+      	<%= render :partial => 'historicoContato' %>
+
+		<p style="color:#a39d95" ng-click="esconderCadastroCompleto = true" ng-show="!esconderCadastroCompleto">CADASTRO COMPLETO <span ng-click="esconderCadastroCompleto = true" ng-show="!esconderCadastroCompleto" class="glyphicon glyphicon-minus alinhandoIcones coresIconesMenos"></span></p>
+
+      	<p style="color:#a39d95" ng-click="esconderCadastroCompleto = false" ng-show="esconderCadastroCompleto">CADASTRO COMPLETO <span size:"10px" ng-click="esconderCadastroCompleto = false" ng-show="esconderCadastroCompleto" class="glyphicon glyphicon-plus alinhandoIcones coresIconesMais"></span></p>
+
+		<h2 style="color:#f24472">USUÁRIOS</h2>
+
+		<p style="color:#a39d95" ng-click="esconderCadastroUsuario = true" ng-show="!esconderCadastroUsuario">CADASTRO <span ng-click="esconderCadastroUsuario = true" ng-show="!esconderCadastroUsuario" class="glyphicon glyphicon-minus alinhandoIcones coresIconesMenos"></span></p>
+
+		<p style="color:#a39d95" ng-click="esconderCadastroUsuario = false" ng-show="esconderCadastroUsuario">CADASTRO <span size:"10px" ng-click="esconderCadastroUsuario = false" ng-show="esconderCadastroUsuario" class="glyphicon glyphicon-plus alinhandoIcones coresIconesMais" ></span></p>
+
+		<p style="color:#a39d95" ng-click="esconderFuncaoUsuario = true" ng-show="!esconderFuncaoUsuario">FUNÇÕES <span ng-click="esconderFuncaoUsuario = true" ng-show="!esconderFuncaoUsuario" class="glyphicon glyphicon-minus alinhandoIcones coresIconesMenos"></span></p>
+
+		<p style="color:#a39d95" ng-click="esconderFuncaoUsuario = false" ng-show="esconderFuncaoUsuario">FUNÇÕES <span size:"10px" ng-click="esconderFuncaoUsuario = false" ng-show="esconderFuncaoUsuario" class="glyphicon glyphicon-plus alinhandoIcones coresIconesMais"></span></p>
+
+		<p style="color:#a39d95" ng-click="esconderPermissaoUsuario = true" ng-show="!esconderPermissaoUsuario">PERMISSÕES <span ng-click="esconderPermissaoUsuario = true" ng-show="!esconderPermissaoUsuario" class="glyphicon glyphicon-minus alinhandoIcones coresIconesMenos"></span></p>
+
+		<p style="color:#a39d95" ng-click="esconderPermissaoUsuario = false" ng-show="esconderPermissaoUsuario">PERMISSÕES <span size:"10px" ng-click="esconderPermissaoUsuario = false" ng-show="esconderPermissaoUsuario" class="glyphicon glyphicon-plus alinhandoIcones coresIconesMais"></span></p>
+
+	</div>
+</div>

@@ -1,0 +1,37 @@
+<%- model_class = Prospecto -%>
+
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
+</div>
+
+<body>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th><%= model_class.human_attribute_name(:nome) %></th>
+        <th><%= model_class.human_attribute_name(:empresa) %></th>
+        <th><%= model_class.human_attribute_name(:telefone) %></th>
+        <th><%= model_class.human_attribute_name(:email) %></th>
+        <th><%= model_class.human_attribute_name(:cidade) %></th>
+        <th><%= model_class.human_attribute_name(:estado) %></th>
+        <th><%= model_class.human_attribute_name(:Criado_em) %></th>
+      </tr>
+    </thead>
+
+    <tbody >
+
+      <% @prospectos.each do |prospecto| %>
+        <tr>
+          <td><%= link_to prospecto.nome, prospecto_path(prospecto) %></td>
+          <td><%= prospecto.empresa %></td>
+          <td><%= prospecto.telefone %></td>
+          <td><%= prospecto.email %></td>
+          <td><%= prospecto.cidade %></td>
+          <td><%= prospecto.estado %></td>
+          <td><%=l prospecto.created_at, :format => '%d/%m/%y' %></td>
+          
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</body>
